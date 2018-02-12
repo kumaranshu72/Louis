@@ -3,3 +3,5 @@ sudo apt-get install espeak
 sudo pip install SpeechRecognition 
 sudo apt-get install python-pyaudio python3-pyaudio
 pip install python-docx
+
+http://blog.justsophie.com/python-speech-to-text-with-pocketsphinx/
