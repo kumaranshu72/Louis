@@ -1,4 +1,5 @@
 import docx
+import os
 
 class readFile:
 
@@ -12,3 +13,12 @@ class readFile:
         for para in doc.paragraphs:
             fullText.append(para.text)
         return '\n'.join(fullText)
+
+    def find_all(self,path):
+        result = []
+        for root, dirs, files in os.walk(path):
+            if self.filename in files:
+                result.append(os.path.join(root, self.filename))
+        return result
+
+#print(len(readFile("readme.docx").find_all("./documents")))

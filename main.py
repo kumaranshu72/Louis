@@ -18,7 +18,7 @@ while(True):
     time.sleep(0.5)
     os.system("echo '\a'")
     time.sleep(0.2)
-    stt.SpeechToText('./sound/file.wav').record()
+    stt.SpeechToText('./sound/file.wav').record(5)
     os.system("echo '\a'")
     response = myVoiceIt.authentication("anshu", "anshu500", "./sound/file.wav", "en-US")
     ind1=response.find("ResponseCode")
@@ -27,6 +27,10 @@ while(True):
     print(response[ind1:ind2])
     if response[ind1:ind2]=="SUC":
         tts.textToSpeech("Welcome "+data[0]['userName']+"  How may i Help You!").say()
+        while true:
+            key_press=input()
+            print key_press
+            pass
         break
     else:
         ind1=response.find("Result")
@@ -35,4 +39,4 @@ while(True):
         msg=response[ind1:ind2]
         print(msg)
         tts.textToSpeech(msg).say()
-        ime.sleep(0.4)
+        time.sleep(0.4)
