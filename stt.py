@@ -17,12 +17,12 @@ class SpeechToText:
         except LookupError:
             return "Could not understand audio"
 
-    def record(self):
+    def record(self,RECORD_SECONDS):
         FORMAT = pyaudio.paInt16
         CHANNELS = 2
         RATE = 44100
         CHUNK = 1024
-        RECORD_SECONDS = 5
+        #RECORD_SECONDS = 5
         WAVE_OUTPUT_FILENAME = self.filename
 
         audio = pyaudio.PyAudio()
