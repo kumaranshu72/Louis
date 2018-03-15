@@ -27,10 +27,7 @@ while(True):
     print(response[ind1:ind2])
     if response[ind1:ind2]=="SUC":
         tts.textToSpeech("Welcome "+data[0]['userName']+"  How may i Help You!").say()
-        while true:
-            key_press=input()
-            print key_press
-            pass
+        #waha dalega test.py wala code
         break
     else:
         ind1=response.find("Result")

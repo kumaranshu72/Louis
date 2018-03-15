@@ -26,8 +26,7 @@ class writeDoc:
 d1=writeDoc()
 d1.addHeading("First Doc")
 d1.addParagraph("My doc")
-d1.saveDoc("Anshu.docx")
-
+d1.saveDoc("./documents/Anshu.docx")
 d1=writeDoc()
 d1.addHeading("Second Doc")
 d1.addParagraph("My doc")
