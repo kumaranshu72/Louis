@@ -9,7 +9,7 @@ from VoiceIt import *
 
 #open USER data
 data = json.load(open('./data/sim.json'))
-myVoiceIt = VoiceIt("2140c866df40472f84530b6fbd4c5a95")
+myVoiceIt = VoiceIt("e0bb5797dcd944e49e6145ec58ffaf59")
 
 #authentication
 while(True):

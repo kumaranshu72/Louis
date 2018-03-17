@@ -1,8 +1,1 @@
-[
-  {
-    "_id": 123456,
-    "userName": "anshu",
-    "DOB": "24/12/1995",
-    "password": "anshu500"
-  }
-]
+{"userName": "anshu", "password": "anshu500", "isRegistered": true}
