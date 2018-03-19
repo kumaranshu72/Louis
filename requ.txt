@@ -1,7 +1,11 @@
-sudo pip install pyttsx
-sudo apt-get install espeak
-sudo pip install SpeechRecognition 
-sudo apt-get install python-pyaudio python3-pyaudio
-pip install python-docx
 
-http://blog.justsophie.com/python-speech-to-text-with-pocketsphinx/
+important
+sudo apt-get install python-pyaudio
+
+sudo pip install -U setuptools
+
+sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
+
+
+
+sudo apt-get install libasound-dev

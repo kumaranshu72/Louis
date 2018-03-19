@@ -74,6 +74,7 @@ data['password']=pswd
 data['isRegistered']=True
 with open('./data/sim.json', 'w') as outfile:
     json.dump(data, outfile)
+os.system("sudo cp ~/Desktop/blinux/Myscript.desktop ~/.config/autostart/")
 print("Registration Successfully! System will restart in 10 seconds")
 time.sleep(10)
 os.system("reboot")
