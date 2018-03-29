@@ -71,7 +71,7 @@ while True:
 data={}
 data['userName']=userName
 data['password']=pswd
-data['isRegistered']=True
+data['isRegistered']="True"
 with open('./data/sim.json', 'w') as outfile:
     json.dump(data, outfile)
 os.system("sudo cp ~/Desktop/blinux/Myscript.desktop ~/.config/autostart/")
