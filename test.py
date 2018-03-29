@@ -12,16 +12,16 @@ def reading():
     time.sleep(0.5)
     os.system("echo '\a'")
     time.sleep(0.2)
-    stt.SpeechToText('./sound/filename.wav').record(3)
+    stt.SpeechToText('~/Desktop/major/sound/filename.wav').record(3)
     os.system("echo '\a'")
-    file_name = stt.SpeechToText('./sound/filename.wav').speech_to_text().replace(" ", "")
+    file_name = stt.SpeechToText('~/Desktop/major/sound/filename.wav').speech_to_text().replace(" ", "")
     file_name = file_name+".docx"
     print(file_name)
-    if len(readDoc.readFile(file_name).find_all("./documents"))<=0:
+    if len(readDoc.readFile(file_name).find_all("~/Desktop/major/documents"))<=0:
         print("No such file found")
         tts.textToSpeech("No File Found").say()
     else:
-        doc_data = readDoc.readFile("./documents/"+file_name).read()
+        doc_data = readDoc.readFile("~/Desktop/major/documents/"+file_name).read()
         print(doc_data)
         tts.textToSpeech(doc_data).say()
 
@@ -33,9 +33,9 @@ def writing():
     time.sleep(0.5)
     os.system("echo '\a'")
     time.sleep(0.2)
-    stt.SpeechToText('./sound/docTitle.wav').record(5)
+    stt.SpeechToText('~/Desktop/major/sound/docTitle.wav').record(5)
     os.system("echo '\a'")
-    doc_title = stt.SpeechToText('./sound/docTitle.wav').speech_to_text()
+    doc_title = stt.SpeechToText('~/Desktop/major/sound/docTitle.wav').speech_to_text()
     paragraph = []
     #taking the first paragraph
     while True:
@@ -43,17 +43,17 @@ def writing():
         time.sleep(0.5)
         os.system("echo '\a'")
         time.sleep(0.2)
-        stt.SpeechToText('./sound/docPara.wav').record(15)
+        stt.SpeechToText('~/Desktop/major/sound/docPara.wav').record(15)
         os.system("echo '\a'")
-        file_para = stt.SpeechToText('./sound/docPara.wav').speech_to_text()
+        file_para = stt.SpeechToText('~/Desktop/major/sound/docPara.wav').speech_to_text()
         paragraph.append(file_para)
         tts.textToSpeech("Do you want add more content").say()
         time.sleep(0.2)
         os.system("echo '\a'")
         time.sleep(0.2)
-        stt.SpeechToText('./sound/res.wav').record(3)
+        stt.SpeechToText('~/Desktop/major/sound/res.wav').record(3)
         os.system("echo '\a'")
-        res=stt.SpeechToText('./sound/res.wav').speech_to_text()
+        res=stt.SpeechToText('~/Desktop/major/sound/res.wav').speech_to_text()
         if res=="no":
             break
     time.sleep(0.2)
@@ -61,15 +61,15 @@ def writing():
     time.sleep(0.5)
     os.system("echo '\a'")
     time.sleep(0.2)
-    stt.SpeechToText('./sound/docName.wav').record(4)
+    stt.SpeechToText('~/Desktop/major/sound/docName.wav').record(4)
     os.system("echo '\a'")
-    file_Name = stt.SpeechToText('./sound/docName.wav').speech_to_text().replace(" ", "")
+    file_Name = stt.SpeechToText('~/Desktop/major/sound/docName.wav').speech_to_text().replace(" ", "")
     file_Name=file_Name+".docx"
     wr.addHeading(doc_title)
     for p in paragraph:
         print(p)
         wr.addParagraph(p)
-    wr.saveDoc("./documents/"+file_Name)
+    wr.saveDoc("~/Desktop/major/documents/"+file_Name)
     tts.textToSpeech("Document saved sucessfully").say()
 
 def browse():
@@ -103,8 +103,8 @@ while True:
         print("You pressed enter")
         os.system("echo '\a'")
         time.sleep(0.2)
-        stt.SpeechToText('./sound/command.wav').record(3)
-        cmd = stt.SpeechToText('./sound/command.wav').speech_to_text()
+        stt.SpeechToText('~/Desktop/major/sound/command.wav').record(3)
+        cmd = stt.SpeechToText('~/Desktop/major/sound/command.wav').speech_to_text()
         print(cmd)
         perform_command(cmd)
 

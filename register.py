@@ -8,8 +8,6 @@ import os
 import json
 
 myVoiceIt = VoiceIt("e0bb5797dcd944e49e6145ec58ffaf59")
-userName = "anshu"
-pswd = "anshu500"
 
 print("WELCOME TO LOUIS")
 userName=raw_input("Enter Your userName : ")
@@ -58,9 +56,9 @@ while True:
     time.sleep(0.5)
     os.system("echo '\a'")
     time.sleep(0.2)
-    stt.SpeechToText('./sound/file.wav').record(5)
+    stt.SpeechToText('/home/anshu/Desktop/major/sound/file.wav').record(5)
     os.system("echo '\a'")
-    response = myVoiceIt.createEnrollment(userName, pswd, "./sound/file.wav", "en-US")
+    response = myVoiceIt.createEnrollment(userName, pswd, "/home/anshu/Desktop/major/sound/file.wav", "en-US")
     print(response)
     ind1=response.find("ResponseCode")
     ind1+=15
@@ -71,10 +69,10 @@ while True:
 data={}
 data['userName']=userName
 data['password']=pswd
-data['isRegistered']=True
-with open('./data/sim.json', 'w') as outfile:
+data['isRegistered']="True"
+with open('/home/anshu/Desktop/major/data/sim.json', 'w') as outfile:
     json.dump(data, outfile)
-os.system("sudo cp ~/Desktop/blinux/Myscript.desktop ~/.config/autostart/")
+os.system("sudo cp /home/anshu/Desktop/major/Myscript.desktop /home/anshu/.config/autostart/")
 print("Registration Successfully! System will restart in 10 seconds")
-time.sleep(10)
+time.sleep(5)
 os.system("reboot")
