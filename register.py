@@ -72,7 +72,7 @@ data['password']=pswd
 data['isRegistered']="True"
 with open('/home/anshu/Desktop/major/data/sim.json', 'w') as outfile:
     json.dump(data, outfile)
-os.system("sudo cp /home/anshu/Desktop/major/Myscript.desktop /home/anshu/.config/autostart/")
+#os.system("sudo cp /home/anshu/Desktop/major/Myscript.desktop /home/anshu/.config/autostart/")
 print("Registration Successfully! System will restart in 10 seconds")
 time.sleep(5)
 os.system("reboot")
