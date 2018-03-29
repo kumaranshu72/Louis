@@ -1,2 +1,2 @@
 import os
-os.system("gnome-terminal -e 'bash -c \"python ~/Desktop/blinux/test.py; exec bash\"'")
+os.system("gnome-terminal -e 'bash -c \"python ~/Desktop/blinux/main.py; exec bash\"'")
