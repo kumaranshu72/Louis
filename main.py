@@ -7,6 +7,7 @@ import os
 import sys
 import time
 from VoiceIt import *
+from calci import calculator
 
 #open USER data
 data = json.load(open('/home/anshu/Desktop/major/data/sim.json'))
@@ -86,8 +87,12 @@ def writing():
 def browse():
     return "Something 1"
 
+
 def calc():
-    return "calc"
+    c=calculator()
+	c.evaluate()
+	#calci.calculator.evaluate();
+
 
 def plmusic():
     return "playing music"
