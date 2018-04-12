@@ -3,3 +3,5 @@ python-docx
 pyaudio==0.2.11
 pyttsx==1.1
 SpeechRecognition==3.8.1
+pynput
+pygame

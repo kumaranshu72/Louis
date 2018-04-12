@@ -4,8 +4,12 @@ from stt import SpeechToText
 
 class calculator:
     def evaluate(self):
-        obj=SpeechToText('./sound/file.wav')
-        obj.record()
+        os.system("echo '\a'")
+        time.sleep(0.2)
+        obj=SpeechToText('./Desktop/major/sound/file.wav')
+        obj.record(5)
+        time.sleep(0.2)
+        os.system("echo '\a'")
         var=obj.speech_to_text();
 
         equation=var.replace("x","*");
@@ -13,7 +17,5 @@ class calculator:
         ans=eval(equation);
         #print(ans);
 
-        spe=textToSpeech("the calculated value is equal to "+ans)
+        spe=textToSpeech("the calculated value is equal to "+str(ans))
         spe.say();
-
-

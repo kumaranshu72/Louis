@@ -75,8 +75,13 @@ def writing():
 def browse():
     return "Something 1"
 
+from calci import calculator
 def calc():
-    return "calc"
+    c=calculator()
+    c.evaluate()
+	#calci.calculator.evaluate();
+
+
 
 def plmusic():
     return "playing music"
@@ -103,8 +108,8 @@ while True:
         print("You pressed enter")
         os.system("echo '\a'")
         time.sleep(0.2)
-        stt.SpeechToText('~/Desktop/major/sound/command.wav').record(3)
-        cmd = stt.SpeechToText('~/Desktop/major/sound/command.wav').speech_to_text()
+        stt.SpeechToText('./sound/command.wav').record(3)
+        cmd = stt.SpeechToText('./sound/command.wav').speech_to_text()
         print(cmd)
         perform_command(cmd)
 
